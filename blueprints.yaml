@@ -1,0 +1,36 @@
+name: WhatsApp Button
+version: 1.0.0
+description: "Wyświetla pływający przycisk WhatsApp w prawym dolnym rogu."
+icon: whatsapp
+author:
+   name: PB MEDIA Studio
+   email: biuro@pbmediaonline.pl
+homepage: https://pbmediaonline.pl
+keywords: whatsapp, chat, button, floating
+bugs: https://pbmediaonline.pl
+
+form:
+   validation: strict
+   fields:
+      enabled:
+         type: toggle
+         label: PLUGIN_ADMIN.PLUGIN_STATUS
+         highlight: 1
+         default: 1
+         options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
+         validate:
+            type: bool
+
+      phone_number:
+         type: text
+         label: Numer telefonu
+         help: "Tylko cyfry z kierunkowym kraju, bez plusa (np. 48123456789)"
+         validate:
+            required: true
+
+      default_message:
+         type: text
+         label: Domyślna wiadomość
+         help: "Treść wiadomości, która automatycznie wpisze się użytkownikowi w aplikacji"

@@ -1,0 +1,51 @@
+.grav-whatsapp-button {
+  position: fixed;
+  bottom: 150px;
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366; /* Oficjalny kolor WhatsApp */
+  color: #ffffff;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+  z-index: 9999;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* Skalowanie ikony SVG */
+.grav-whatsapp-button svg {
+  width: 35px;
+  height: 35px;
+  transition: transform 0.3s ease;
+}
+
+/* Animacja Hover (Dla Desktopu) */
+.grav-whatsapp-button:hover {
+  background-color: #20ba56;
+  box-shadow: 0px 6px 20px rgba(37, 211, 102, 0.4);
+  transform: translateY(-4px);
+  color: #ffffff;
+}
+
+.grav-whatsapp-button:hover svg {
+  transform: scale(1.1);
+}
+
+/* Resposywność - na mniejszych ekranach delikatnie pomniejszamy przycisk */
+@media (max-width: 768px) {
+  .grav-whatsapp-button {
+    bottom: 125px;
+    right: 20px;
+    width: 55px;
+    height: 55px;
+  }
+
+  .grav-whatsapp-button svg {
+    width: 30px;
+    height: 30px;
+  }
+}
